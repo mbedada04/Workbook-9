@@ -18,7 +18,13 @@ class Employee extends Person {
     this.jobTitle = jobTitle;
     this.payRate = payRate;
   }
+  getPayStub(){
+    return`Employee Name: ${this.getFullName()}
+    job Title: ${this.jobTitle}
+    Weekly Pay: ${this.payRate * 50}`
+  }
 }
 
-let employee = new Employee("Programmer", "Millena", 2, "App Dev", 2000000);
+let employee = new Employee("Programmer", "goddess", 2, "App Dev", 2000000);
 console.log(employee.getFullName());
+console.log(employee.getPayStub());
